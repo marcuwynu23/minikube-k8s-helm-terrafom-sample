@@ -1,0 +1,18 @@
+replicaCount: 5
+
+image:
+  repository: vite-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 3000
+
+containerPort: 3000
+
+fullnameOverride: vite-app
+
+appLabels:
+  app: vite-app
